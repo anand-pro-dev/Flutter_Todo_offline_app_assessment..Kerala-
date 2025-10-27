@@ -21,3 +21,27 @@ shared_preferences — Stores simple key-value data like theme mode.
 google_fonts — Applies custom Google Fonts for better UI appearance.
 
 permission_handler — Requests and manages runtime permissions (e.g., storage access).
+
+
+🚀 Setup and Run Instructions
+
+Clone the repository
+
+git clone https://github.com/anand-pro-dev/Flutter_Todo_offline_app_assessment..Kerala-.git
+cd Flutter_Todo_offline_app_assessment..Kerala-
+
+
+Install dependencies
+
+flutter pub get
+
+
+Run the app
+
+flutter run
+
+
+(Optional) Clean and rebuild
+
+flutter clean
+flutter pub get
