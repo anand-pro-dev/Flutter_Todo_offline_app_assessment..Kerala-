@@ -22,6 +22,7 @@ google_fonts — Applies custom Google Fonts for better UI appearance.
 
 permission_handler — Requests and manages runtime permissions (e.g., storage access).
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 🚀 Setup and Run Instructions
 
@@ -45,3 +46,39 @@ flutter run
 
 flutter clean
 flutter pub get
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+🧩 Folder Structure
+lib/
+├── data/
+│   ├── models/
+│   │   ├── todo_model.dart
+│   │   └── sync_operation.dart
+│   ├── services/
+│   │   ├── api_service.dart
+│   │   └── local_db_service.dart
+│   └── repository/
+│       └── todo_repository.dart
+│
+├── logic/
+│   ├── blocs/
+│   │   ├── todo_bloc.dart
+│   │   ├── todo_event.dart
+│   │   └── todo_state.dart
+│   └── cubits/
+│       ├── connectivity_cubit.dart
+│       ├── theme_cubit.dart
+│       └── theme_state.dart
+│
+├── presentation/
+│   ├── screens/
+│   │   └── todo_screen.dart
+│   └── widgets/
+│       └── todo_item_tile.dart
+│
+└── main.dart
+
+
