@@ -1,1 +1,8 @@
 Task
+
+ToDo Tracker with Local & Remote Sync 
+User Story: 
+As a user, 
+I want to view, create, edit, and delete my ToDo items, 
+so that I can track my tasks even when I’m offline, 
+and have them automatically synced to the remote server when I go online again.
