@@ -1,16 +1,23 @@
 # todo_tracker
 
-A new Flutter project.
+📦 Packages Used
 
-## Getting Started
+flutter — Core SDK for building the UI and app logic.
 
-This project is a starting point for a Flutter application.
+cupertino_icons — Provides iOS-style system icons.
 
-A few resources to get you started if this is your first Flutter project:
+http — Used for making API requests to sync todos with the server.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+connectivity_plus — Detects internet connection status (online/offline).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+flutter_bloc — Manages app state using the BLoC and Cubit pattern.
+
+equatable — Simplifies equality checks for BLoC states and events.
+
+sqflite — Local SQLite database for offline todo storage.
+
+shared_preferences — Stores simple key-value data like theme mode.
+
+google_fonts — Applies custom Google Fonts for better UI appearance.
+
+permission_handler — Requests and manages runtime permissions (e.g., storage access).
