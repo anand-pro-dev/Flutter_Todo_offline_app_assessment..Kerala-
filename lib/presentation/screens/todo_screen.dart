@@ -9,6 +9,7 @@ import '../../logic/cubits/theme_cubit.dart';
 import '../../logic/cubits/theme_state.dart';
 import '../../data/models/todo_model.dart';
 import '../widgets/todo_item_tile.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class TodoScreen extends StatefulWidget {
   const TodoScreen({Key? key}) : super(key: key);
@@ -23,6 +24,30 @@ class _TodoScreenState extends State<TodoScreen> {
   Future<void> _refresh() async {
     final bloc = context.read<TodoBloc>();
     bloc.add(const SyncTodosEvent());
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _requestStoragePermission();
+  }
+
+  /// ✅ Ask for storage permission
+  Future<void> _requestStoragePermission() async {
+    var status = await Permission.storage.status;
+    if (!status.isGranted) {
+      status = await Permission.storage.request();
+    }
+
+    if (status.isGranted) {
+      debugPrint("✅ Storage permission granted");
+    } else {
+      showCustomNotification(
+        context,
+        "⚠️ Storage permission denied. Local data may not be saved.",
+        color: Colors.red,
+      );
+    }
   }
 
   void _showAddDialog() {

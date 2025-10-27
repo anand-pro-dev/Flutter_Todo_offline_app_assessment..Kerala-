@@ -1,5 +1,22 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.todo_tracker">
 
+   <!-- ✅ Safe storage permissions across Android 25–36 -->
+
+        <!-- For Android 10 (API 29) and below -->
+        <uses-permission
+            android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+            android:maxSdkVersion="28" />
+
+        <uses-permission
+            android:name="android.permission.READ_EXTERNAL_STORAGE"
+            android:maxSdkVersion="32" />
+
+        <!-- For Android 11 (API 30) and above -->
+        <uses-permission
+            android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+            tools:ignore="ScopedStorage" />
 
         <uses-permission android:name="android.permission.INTERNET" />
 
